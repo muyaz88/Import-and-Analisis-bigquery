@@ -49,9 +49,24 @@ SELECT
         ELSE 0.30
     END AS nett_profit,
 
-    ft.rating AS rating_transaksi -- Rating transaksi dari pelanggan
+    ft.rating AS rating_transaksi 
+    
+-- Rating transaksi dari pelanggan
 FROM `modular-bot-455205-d3.challenge.final_transacrion` ft
 JOIN `modular-bot-455205-d3.challenge.kantor_cabang` kc
 ON ft.branch_id = kc.branch_id
 JOIN `modular-bot-455205-d3.challenge.product` p
 ON ft.product_id = p.product_id;
+
+--membuat ordery untuk membantu visualisasi
+SELECT 
+    branch_name, 
+    rating, 
+    rating_transaksi 
+FROM 
+    `challenge.analisa`
+ORDER BY 
+    rating DESC, 
+    rating_transaksi ASC
+LIMIT 5;
+
