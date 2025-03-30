@@ -2,7 +2,7 @@
 CREATE OR REPLACE TABLE `modular-bot-455205-d3.challenge.analisa` AS
 SELECT 
     ft.transaction_id,
-    ft.date AS date,  -- Ubah sesuai nama kolom yang benar
+    ft.date AS date,  
     kc.branch_id,
     kc.branch_name,
     kc.kota,
@@ -20,7 +20,7 @@ SELECT
     kc.branch_name,
     kc.kota,
     kc.provinsi,
-    kc.rating,  -- Penilaian cabang
+    kc.rating,  
     ft.customer_name,
     ft.product_id,
     p.product_name,
